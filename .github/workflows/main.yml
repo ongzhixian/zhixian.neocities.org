@@ -49,5 +49,6 @@ jobs:
           echo "ref sss"
           echo ${{ github.ref }}
           echo "zxcasd"
-          echo ${{ toJSON(github) }}
-          echo ${{ toJSON(github.event) }}
+          toJSON(job)
+          toJSON(github)
+          toJSON(github.event)
