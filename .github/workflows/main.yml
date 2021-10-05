@@ -43,3 +43,11 @@ jobs:
           echo ${{ github }}
           echo "stop here"
           echo ${{ github.action }}
+          echo "show event"
+          echo ${{ github.event }}
+          echo ${{ github.event_name }}
+          echo "ref sss"
+          echo ${{ github.ref }}
+          echo "zxcasd"
+          echo ${{ toJSON(github) }}
+          echo ${{ toJSON(github.event) }}
