@@ -40,4 +40,6 @@ jobs:
         run: |
           echo $GITHUB_WORKSPACE
           ls -al
-          
+          echo ${{ github }}
+          echo "stop here"
+          echo ${{ github.action }}
