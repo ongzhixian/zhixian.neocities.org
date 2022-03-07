@@ -2,4 +2,6 @@
 
 zhixian.neocities.org
 
-test 2
+## Run
+
+python3 -m http.server 8000 --bind 127.0.0.1 
