@@ -1,59 +1,140 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Demo School Application</title>
-    <link href="/css/primer/primer.css" rel="stylesheet" />
-    <link href="/css/style.css" rel="stylesheet" type="text/css" media="all" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>NOZ</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="/css/materialize/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="icon" type="image/png" href="/img/favicon.png"/>
+  
 </head>
-
 <body>
-    <div class="Header">
-        <div class="Header-item">
-            <a href="/" class="Header-link h2">
-                <span>Demo School</span>
-            </a>
-        </div>
-        <!--
-        <div class="Header-item">
-            <input type="search" class="form-control input-dark" />
-        </div>
-        -->
-        <div class="Header-item Header-item--full">
-            <a href="#" class="Header-link mx-3">School</a>
-        </div>
-        <div class="Header-item mr-0">
-            <a href="#" class="Header-link mx-3">School</a>
-            |<a href="/credits.html" class="Header-link mx-3" title="Credits and Attributions">Credits</a>
-        </div>
+  <nav class="purple darken-4" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">NOZ</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center purple-text">NOZ</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">A static website made using <a href="http://materializecss.com">Materialize</a>
+        </h5>
+      </div>
+      <div class="row center">
+        <a href="/apps/index.html" id="download-button" class="btn-large waves-effect waves-light purple">
+          Get Started</a>
+      </div>
+      <br><br>
 
-    <main>
-        <h1>Demo School Application</h1>
+    </div>
+  </div>
 
-        <p>This is my demo school application using AWS test.</p>
 
-        <!--
-        <p>This is a paragraph! Here's how you make a link: <a href="http://neocities.org">Neocities</a>.</p>
+  <div class="container">
+    <div class="section">
 
-        <p>Here's how you can make <strong>bold</strong> and <em>italic</em> text.</p>
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center purple-text"><i class="material-icons">book</i></h2>
+            <h5 class="center">
+              <a href="/blog">Blog</a>
 
-        <p>Here's how you can add an image:</p>
-        <img src="/img/neocities.png">
+            </h5>
 
-        <p>Here's how to make a list:</p>
+            <p class="light">
+              My blog on this website! Yeah, its been a long time since I last did a static website of any sort.
+              So I thought I want to blog about the experience among other things.<br/>
+              It should be "fun"!
+            </p>
+          </div>
+        </div>
 
-        <ul>
-            <li>First thing</li>
-            <li>Second thing</li>
-            <li>Third thing</li>
-        </ul>
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center purple-text"><i class="material-icons">group</i></h2>
+            <h5 class="center">Planning Poker</h5>
 
-        <p>To learn more HTML/CSS, check out these <a href="http://neocities.org/tutorials">tutorials</a>!</p>
-        -->
+            <p class="light">
+              Trying to write my own planning poker application.<br/>
+              Still in the initial stages.
+              </p>
+          </div>
+        </div>
 
-    </main>
-</body>
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center purple-text"><i class="material-icons">settings</i></h2>
+            <h5 class="center">Rtk Clone</h5>
 
+            <p class="light">
+              My attempt at trying to create a RTK2 game clone.<br/>
+              Still in the initial stages.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <br><br>
+  </div>
+
+  <footer class="page-footer purple darker-1">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Developer Bio</h5>
+          <p class="grey-text text-lighten-4">
+            A Singapore software developer who is making a informative website on Neocities.<br/>
+            Any amount would help support and continue development on this project and is greatly appreciated.
+          </p>
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      <a href="http://neocities.org/"><img src="/img/neocities.png" /></a>
+      
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="/js/materialize/materialize.js"></script>
+  <script src="/js/init.js"></script>
+  </body>
 </html>

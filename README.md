@@ -4,4 +4,8 @@ zhixian.neocities.org
 
 ## Run
 
-python3 -m http.server 8000 --bind 127.0.0.1 
+python -m http.server 8000 --bind 127.0.0.1
+
+
+npm install @primer/css --save
+\node_modules\@primer\css\dist
