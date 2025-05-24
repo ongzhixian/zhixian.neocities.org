@@ -234,13 +234,6 @@ class FileSyncManager:
                 return True
         return False
 
-    # def __is_in_ignore_file_list(self, file_name, src_path):
-    #     if file_name in self.ignore_file_list:
-    #         logger.debug(f"{'IGNORE-(F)':<10} {src_path}.")
-    #         return True
-    #     return False
-
-
     def scan_files(self):
         """Scan a directory and return a list of file paths to upload
 
@@ -315,7 +308,6 @@ def main():
 
     # Upload new or modified files.
     for file_path in files_to_upload:
-        logger.info(f"Uploading: {file_path}")
         client.upload_file(file_path)
 
     # Get site information and the current file list.
