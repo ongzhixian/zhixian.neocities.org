@@ -12,11 +12,8 @@ import os
 import json
 import subprocess
 import logging
-from pathlib import Path
 
 import requests
-
-import pdb
 
 NEOCITIES_BASE_API_URL = "https://neocities.org/api"
 
