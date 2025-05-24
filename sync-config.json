@@ -1,0 +1,37 @@
+{
+    "remote": {
+        "name": "neocities.org",
+        "api_base_url": "https://neocities.org/api"
+    },
+    "secrets": {
+        "tech-notes-press": "%APPDATA%/Microsoft/UserSecrets/tech-notes-press/secrets-development.json",
+        "api-secret-key": "neocities:zhixian_api_key"
+    },
+    "sync": {
+        "ignore_file_list": [
+            ".gitignore",
+            "sync.log",
+            "sync-config.json",
+            "sync.py",
+            "sync-oo1.py",
+            "sync-001.py",
+            "sync-opt.py",
+            "sync-orig.py"
+        ],
+        "ignore_paths": [
+            "/.git",
+            "/.idea"
+        ],
+        "last-max-timestamp": 1747740715.1375926
+    },
+    "__secrets__": {
+        "neocities": {
+            "path": "%APPDATA%/Microsoft/UserSecrets/tech-notes-press/secrets-development.json",
+            "secret_keys": {
+                "api_key": "neocities:zhixian_api_key",
+                "other_key": "neocities:other_key"
+            }
+        }
+    },
+    "__notes__": {}
+}
