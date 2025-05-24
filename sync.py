@@ -15,6 +15,8 @@ import logging
 
 import requests
 
+import pdb
+
 NEOCITIES_BASE_API_URL = "https://neocities.org/api"
 
 class AppLogger:
@@ -69,7 +71,7 @@ class AppConfiguration:
         logger.debug(f"Configuration file name '{self.configuration_file_name}'.")
 
         self.config = self.load_config()
-        logger.info(f"Configuration loaded.")
+        logger.debug(f"Configuration loaded.")
 
     def load_config(self):
         try:
@@ -132,7 +134,7 @@ class SecretsManager:
         try:
             with open(self.secrets_file_path, "r", encoding="utf-8") as f:
                 secrets = json.load(f)
-                logger.info(f"Secrets loaded.")
+                logger.debug(f"Secrets loaded.")
                 return secrets
         except Exception as ex:
             logger.error(f"Error reading secrets file at '{self.secrets_file_path}': {ex}")
@@ -146,7 +148,7 @@ class NeocitiesClient:
         self.api_key = api_key
         self.base_url = base_url
         self.headers = {"Authorization": f"Bearer {self.api_key}"}
-        logger.info("NeocitiesClient initialized.")
+        logger.debug("NeocitiesClient initialized.")
 
     def get_site_info(self):
         url = f"{self.base_url}/info"
@@ -223,7 +225,7 @@ class FileSyncManager:
         self.config_key = 'sync:last-max-timestamp'
         self.prev_timestamp = self.sync_config.get(self.config_key)
         if self.prev_timestamp:
-            logger.info(f"Previous last-max-timestamp: {self.prev_timestamp}")
+            logger.debug(f"Previous last-max-timestamp: {self.prev_timestamp}")
 
     def __is_in_ignore_file_path_list(self, root_path):
         for ignore_file_path in self.ignore_file_path_list:
@@ -280,7 +282,6 @@ class FileSyncManager:
 
 
 def main():
-    logger.info("[START]")
 
     # Load synchronization configuration.
     app_configuration = AppConfiguration()
@@ -293,7 +294,7 @@ def main():
         logger.error("neocities_api_key is not defined in secrets. Exiting...")
         exit(1)
     api_key = secrets[api_secret_key]
-    logger.info("API key retrieved successfully.")
+    logger.debug("API key retrieved successfully.")
 
     # Scan local directory for updated or new files.
     current_directory = os.getcwd()
@@ -311,14 +312,19 @@ def main():
     # site_info = client.get_site_info()
     # if site_info:
     #     logger.info(f"Site Info: {site_info}")
-    #
+
+    # Get remote site files count
     # files_info = client.get_site_file_list()
     # if files_info:
     #     files_on_site = files_info.get("files", [])
-    #     logger.info(f"Files count on site: {len(files_on_site)}")
-
-
-
+    #     logger.info(f"File record count on site: {len(files_on_site)}")
+    #
+    #     # Filter for actual file entries only
+    #     file_path_list = []
+    #     for file_entry in files_on_site:
+    #         if not file_entry["is_directory"]:
+    #             file_path_list.append(file_entry["path"])
+    #     logger.info(f"Actual file count: {len(file_path_list)}.")
 
 
 if __name__ == "__main__":
